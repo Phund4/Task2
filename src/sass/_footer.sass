@@ -1,0 +1,67 @@
+.footer
+    color: $color-white
+    display: flex
+    @include respond(phone)
+        background-color: black
+        flex-direction: column
+        padding-left: 15px
+    &__h3
+        font-style: normal
+        font-weight: 700
+        font-size: 1.4rem
+        line-height: 17px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: $color-grey
+        margin-bottom: 20px
+        @include respond(phone)
+            margin-bottom: 30px
+    &__list
+        list-style: none
+        li
+            font-style: normal
+            font-weight: 400
+            font-size: 1.6rem
+            line-height: 19px
+            margin-bottom: 10px
+    &__p
+        font-style: normal
+        font-weight: 400
+        font-size: 12px
+        line-height: 15px
+        color: $color-grey
+        text-align: right
+        @include respond(phone)
+            text-align: left
+
+.footer-company
+    margin-right: 10rem
+    display: inline-block
+    @include respond(phone)
+        margin-right: 0
+        margin-top: 45px
+        margin-bottom: 30px
+
+.footer-menu
+    margin-right: 5.2rem
+    display: inline-block
+    @include respond(phone)
+        margin-right: 0
+
+.footer-menu-next
+    margin-top: 37px
+    margin-right: 16.3rem
+    display: inline-block
+    @include respond(phone)
+        margin-right: 0
+        display: block
+        margin-bottom: 30px
+
+.footer-contacts
+    text-align: right
+    ul
+        margin-bottom: 70px
+        @include respond(phone)
+            margin-bottom: 30px
+    @include respond(phone)
+        text-align: left

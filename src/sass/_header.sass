@@ -1,0 +1,75 @@
+.header
+    height: 73px
+    display: flex
+    padding-top: 11px
+    color: $color-white
+    margin-bottom: 90px
+    @include respond(phone)
+        height: 55px
+        margin-bottom: 0
+        background-color: black
+        width: 100%
+
+.logo
+    margin-bottom: 4px
+    margin-right: 5rem
+    &__img
+        margin-bottom: 10px
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 1rem
+        line-height: 12px
+    @include respond(phone)
+        display: none
+
+.menu
+    margin-top: 4px
+    li
+        font-style: normal
+        font-weight: 500
+        font-size: 1.6rem
+        line-height: 19px
+        text-decoration: none
+        display: inline
+        margin-top: 4px
+        margin-right: 3rem
+        &:last-child
+            margin-right: 13.7rem
+            @include respond(tab-land)
+                margin-right: 0
+        @include respond(phone)
+            font-style: normal
+            font-weight: 500
+            font-size: 1.2rem
+            line-height: 15px
+            text-transform: uppercase
+            margin-bottom: 2rem
+            &:first-child
+                margin-left: 1.6rem
+            &:last-child
+                display: none
+    @include respond(phone)
+        display: flex
+        justify-content: space-evenly
+
+.contacts
+    display: flex
+    justify-content: flex-end
+    &__phone-number
+        font-style: normal
+        font-weight: 500
+        font-size: 1.6rem
+        line-height: 19px
+        margin-right: 4.7rem
+        margin-top: 4px
+        text-decoration: none
+        color: $color-white
+    img
+        width: 2rem
+        height: 1.9rem
+        margin-right: 3rem
+        &:last-child
+            margin-right: 0
+    @include respond(tab-land)
+        display: none

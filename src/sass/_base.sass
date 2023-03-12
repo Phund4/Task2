@@ -1,0 +1,39 @@
+$color-black: #0E1014
+$color-black-phone: #1E1E1E
+$color-white: #E4E5EA
+$color-grey: #656566
+$color-light-blue: #4077F3
+$gradient: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA
+
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 426px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 1050px)
+            @content
+
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1435px)
+            @content
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-family: 'Inter', sans-serif
+    font-size: 62.5%
+
+body
+    position: relative
+    background-color: $color-black
+    padding-top: 60px
+    padding-left: 10vw
+    @include respond(phone)
+        padding: 0
+
+
